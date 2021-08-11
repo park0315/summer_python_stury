@@ -1,0 +1,430 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyPoXMWUIuoZ+ltDd77GFLSt",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/park0315/summer_python_stury/blob/main/2day_dict\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ROUe3EHa5df4"
+      },
+      "source": [
+        "myset = set()\n",
+        "myset = {1, 1, 1,3, 3, 5, 5, 7, 10, 124, 135, 124, 135}\n",
+        "yourset = set()\n",
+        "yourset = {4, 4, 8, 14, 28, 18, 28, 39, 18, 124, 135}"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Xs8dt1lU5eLV",
+        "outputId": "c0e848b0-a5c5-4dce-81fb-efe22ede6d38"
+      },
+      "source": [
+        "myset - yourset"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{1, 3, 5, 7, 10}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P3evwnRT6R3b",
+        "outputId": "c1bce1b6-e00d-471c-d94f-8e5af9e6b422"
+      },
+      "source": [
+        "weset = myset & yourset\n",
+        "weset"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{124, 135}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "35OqxIz-6lPm"
+      },
+      "source": [
+        "#딕셔너리\n",
+        "\n",
+        "- 순서를 가지지 않습니다\n",
+        "- key와 값의 쌍으로 이루어져 있습니다\n",
+        "- type은 dict로 표시 됩니다\n",
+        "- key를 사용하여 값을 조회할 수 있습니다\n",
+        "- 딕셔너리는 수정, 삭제, 추가가 가능합니"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kBcJhF1J61xB",
+        "outputId": "df580864-fc22-47ac-f357-9927f18d180a"
+      },
+      "source": [
+        "mydict = dict()\n",
+        "print(type(dict))\n",
+        "mydict"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "<class 'type'>\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jjhLAvEp69qN",
+        "outputId": "392b90a6-ccb6-4e26-faed-342f1d9ba653"
+      },
+      "source": [
+        "mydict = {'A':1,'B':2, 'C':3, 100: 4 ,3.14: 5, True:6}\n",
+        "mydict"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{100: 4, 3.14: 5, 'A': 1, 'B': 2, 'C': 3, True: 6}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0V861JwQ7VT2",
+        "outputId": "e8c31e57-0b07-4613-d728-aa8ce1a09b19"
+      },
+      "source": [
+        "mydict.get('A')"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 169
+        },
+        "id": "SMsnDWIg7qad",
+        "outputId": "90a89072-7a04-4490-b351-6d10c7c9739f"
+      },
+      "source": [
+        "mydict('므')"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-19-580f74c5b439>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mmydict\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'므'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m: 'dict' object is not callable"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2pAXIkQr7tHx"
+      },
+      "source": [
+        "mydict = {'A':100,'b':200,'c':300,'d':400,'e':500,'f':600}"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Pq74-uYj8OJf",
+        "outputId": "c99f564d-cdb1-4814-abcb-d5faa4d5ba4e"
+      },
+      "source": [
+        "mydict.keys()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_keys(['A', 'b', 'c', 'd', 'e', 'f'])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BJZRzRz48TeX",
+        "outputId": "2171c1d0-51bc-469a-bd83-07af7db94495"
+      },
+      "source": [
+        "mydict.values()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_values([100, 200, 300, 400, 500, 600])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 25
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XIniPlKL8bMF",
+        "outputId": "6b7b14bc-c29a-4166-dab0-6ce534363fc0"
+      },
+      "source": [
+        "mydict.items()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_items([('A', 100), ('b', 200), ('c', 300), ('d', 400), ('e', 500), ('f', 600)])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 26
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KO_BvmVg8jdL",
+        "outputId": "7d528305-ffac-4726-9327-ced6b2fe8d66"
+      },
+      "source": [
+        "list(mydict.keys())"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['A', 'b', 'c', 'd', 'e', 'f']"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gAily5_F88gj",
+        "outputId": "bdb5719a-09a5-44cf-c6a1-8ef4e2a7357b"
+      },
+      "source": [
+        "'A' in mydict"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 29
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kKFF8aLr9Bll",
+        "outputId": "4f67f028-b1f1-42eb-a360-e78128fe14f0"
+      },
+      "source": [
+        "'g' in mydict"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_onILI2O9HBf"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
